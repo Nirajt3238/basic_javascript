@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter Program</title>
+</head>
+<body>
+    
+    <center>
+        <h3>Rest Parameter Program</h3>
+    </center>
+    
+    <script>
+        function numberstoArray(){
+            let numbers = prompt("Enter Numbers");
+            while (!/^[0-9]+$/.test(numbers)) {
+                alert("You did not enter a number.");
+                numbers = prompt("Enter a number: ");
+            }
+           
+            let myFunc = num => Number(num);
+            
+            var intArr = Array.from(String(numbers), myFunc);
+            
+            // Print the result array
+            document.write(intArr);
+        }
+        numberstoArray();
+    </script>
+</body>
+</html>
